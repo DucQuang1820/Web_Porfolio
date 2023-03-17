@@ -1674,3 +1674,8 @@ input, select, textarea {
 .project-item .detail-tags {
 	display: flex;
 }
+
+/* Contact */
+#contact {
+	font-size: 18px;
+}
