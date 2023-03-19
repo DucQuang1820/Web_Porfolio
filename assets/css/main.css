@@ -1665,17 +1665,32 @@ input, select, textarea {
 .project-list {}
 .project-item {
 	display: flex;
+	padding: 10px 0px;
 }
 .project-item .project-image {
 	width: 300px;
 	aspect-ratio: 16/9;
 	object-fit: cover;
 }
-.project-item .detail-tags {
-	display: flex;
+.project-detail {
+	padding-left: 15px;
+	font-size: 24px;
+	position: relative;
 }
-
-/* Contact */
-#contact {
-	font-size: 18px;
+.project-detail .detail-tags {
+	display: flex;
+	font-size: 14px;
+	gap: 10px;
+	padding: 10px 5px;
+}
+.project-detail .detail-tags > div {
+	padding: 3px;
+	background-color: #1b1f22;
+	border-radius: 3px;
+	position: relative;
+	cursor: default;
+	transition: 0.4s;
+}
+.project-detail .detail-tags > div:hover {
+	background-color: #4d555b;
 }
