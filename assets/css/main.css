@@ -1665,10 +1665,14 @@ input, select, textarea {
 .project-list {}
 .project-item {
 	display: flex;
-	padding: 10px 0px;
+	flex-wrap: wrap;
+	padding: 20px 0px;
+	box-shadow: 0px 3px 4px -3px rgba(255, 255, 255, 0.5);
 }
+
 .project-item .project-image {
-	width: 300px;
+	width: 100%;
+	max-width: 300px;
 	aspect-ratio: 16/9;
 	object-fit: cover;
 }
@@ -1676,9 +1680,11 @@ input, select, textarea {
 	padding-left: 15px;
 	font-size: 24px;
 	position: relative;
+	width: 100%;
 }
 .project-detail .detail-tags {
 	display: flex;
+	flex-wrap: wrap;
 	font-size: 14px;
 	gap: 10px;
 	padding: 10px 5px;
@@ -1690,7 +1696,22 @@ input, select, textarea {
 	position: relative;
 	cursor: default;
 	transition: 0.4s;
+	white-space: nowrap;
 }
 .project-detail .detail-tags > div:hover {
 	background-color: #4d555b;
+}
+.project-detail a {
+	font-size: 16px;
+}
+@media (min-width: 737px) {
+	.project-item {
+		flex-wrap: nowrap;
+		box-shadow: none;
+	}
+	.project-item .project-image {
+	}
+	.project-detail {
+		width: auto;
+	}
 }
