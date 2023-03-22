@@ -1731,6 +1731,11 @@ input, select, textarea {
 .project-detail a.icon:hover {
 	color: gray;
 }
+.project-detail a.icon {
+	font-size: 20px;
+	padding-left: 6px;
+	padding-right: 10px;
+}
 @media (min-width: 737px) {
 	.project-item {
 		flex-wrap: nowrap;
