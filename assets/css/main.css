@@ -1663,6 +1663,23 @@ input, select, textarea {
 /* Project list */
 
 .project-list {}
+.subTit {
+	display: flex;
+	font-size: 24px;
+}
+.subTit .divLine {
+	position: relative;
+	flex-grow: 1;
+}
+.subTit .divLine::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	margin-left: 15px;
+	height: 1px;
+	background-color: rgb(141, 141, 141);
+	top: calc(50% - 0.5px)
+}
 .project-item {
 	display: flex;
 	flex-wrap: wrap;
@@ -1672,37 +1689,47 @@ input, select, textarea {
 
 .project-item .project-image {
 	width: 100%;
-	max-width: 300px;
+	max-width: 250px;
 	aspect-ratio: 16/9;
 	object-fit: cover;
 }
 .project-detail {
 	padding-left: 15px;
-	font-size: 24px;
+	font-size: 20px;
 	position: relative;
 	width: 100%;
 }
 .project-detail .detail-tags {
-	display: flex;
 	flex-wrap: wrap;
 	font-size: 14px;
-	gap: 10px;
+	gap: 5px;
 	padding: 10px 5px;
+	padding-bottom: 0px;
 }
-.project-detail .detail-tags > div {
+.project-detail .detail-tags > span {
 	padding: 3px;
-	background-color: #1b1f22;
+	background-color: #2a2323;
 	border-radius: 3px;
 	position: relative;
 	cursor: default;
 	transition: 0.4s;
 	white-space: nowrap;
 }
-.project-detail .detail-tags > div:hover {
-	background-color: #4d555b;
+.project-detail .detail-tags > span:hover {
+	background-color: rgb(120, 101, 101);
+}
+.project-detail .platform {
+	font-size: 14px
+}
+.project-detail .short-desc {
+	font-size: 16px;
+	color: rgb(230, 230, 230);
 }
 .project-detail a {
 	font-size: 16px;
+}
+.project-detail a.icon:hover {
+	color: gray;
 }
 @media (min-width: 737px) {
 	.project-item {

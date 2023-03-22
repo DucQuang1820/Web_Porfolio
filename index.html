@@ -34,7 +34,7 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="#intro">Intro</a></li>
+					<!-- <li><a href="#intro">Intro</a></li> -->
 					<li><a href="#work">Work</a></li>
 					<!-- <li><a href="#about">About</a></li> -->
 					<li><a href="#contact">Contact</a></li>
@@ -47,11 +47,23 @@
 		<div id="main">
 
 			<!-- Intro -->
-			<article id="intro">
+			<article id="rubik-box">
 				<iframe mozallowfullscreen="true" allow="autoplay; fullscreen" src="./WebGLBuild/index.html"
-					style="border:0px #000000 none; aspect-ratio: 560 / 640;" name="Rubik"
-					scrolling="no" msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true"
+					style="border:0px #000000 none; aspect-ratio: 560 / 640;" name="Rubik" scrolling="no"
+					msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true"
 					allowtransparency="true" frameborder="0" width="100%"></iframe>
+			</article>
+			<article id="lines97-box">
+				<iframe mozallowfullscreen="true" allow="autoplay; fullscreen" src="./WebGLBuild2/index.html"
+				style="border:0px #000000 none; aspect-ratio: 560 / 640;" name="Lines97" scrolling="no"
+				msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true"
+				allowtransparency="true" frameborder="0" width="100%"></iframe>
+			</article>
+			<article id="solitaire-box">
+				<iframe mozallowfullscreen="true" allow="autoplay; fullscreen" src="./WebGLBuild3/index.html"
+				style="border:0px #000000 none; aspect-ratio: 560 / 640;" name="Lines97" scrolling="no"
+				msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true"
+				allowtransparency="true" frameborder="0" width="100%"></iframe>
 			</article>
 
 			<!-- Work -->
@@ -59,67 +71,138 @@
 				<h2 class="major">Work</h2>
 				<p>I self-taught Unity and picked up Unreal Engine during my internship</p>
 				<div class="project-list">
+					<div class="subTit">
+						<div>Personal / Studies</div>
+						<div class="divLine"></div>
+					</div>
 					<div class="project-item">
 						<img class="project-image" src="./images/project1.png" />
 						<div class="project-detail">
 							The Last Guardian
-							<div class="detail-tags">
-								<div>RPG</div>
-								<div>Top down</div>
-								<div>Single player</div>
-								<div>Bullet hell</div>
+							<span class="detail-tags">
+								<span>RPG</span>
+								<span>Bullet hell</span>
+							</span>
+							<div class="platform">
+								Made with <a href="https://unity.com/" target="_blank">Unity</a>
 							</div>
-							<a href="https://gitlab.com/DucQuang1820/topdownpixel_unity" target="_blank">Check the
-								repo</a>
+							<div class="short-desc">
+								A game where you explore post apocalyptic world and fight mobs and bosses
+							</div>
+							<a href="https://gitlab.com/DucQuang1820/topdownpixel_unity" class="icon fa-solid fa-arrow-alt-circle-right" target="_blank"></a>
+						</div>
+					</div>
+					<div class="project-item">
+						<img class="project-image" src="./images/project5.png" />
+						<div class="project-detail">
+							Lines 97
+							<span class="detail-tags">
+								<span>Classic</span>
+								<span>Arcade</span>
+								<span>Puzzle</span>
+							</span>
+							<div class="platform">
+								Made with <a href="https://unity.com/" target="_blank">Unity</a>
+							</div>
+							<div class="short-desc">
+								Classic puzzle game made to learn Unity
+							</div>
+							<a href="https://github.com/DucQuang1820/Lines97_Unity" class="icon fa-solid fa-arrow-alt-circle-right" target="_blank"></a>
+							<a href="/#lines97-box">Try now</a>
+						</div>
+					</div>
+					<div class="project-item">
+						<img class="project-image" src="./images/project6.png" />
+						<div class="project-detail">
+							Rubik simulator
+							<span class="detail-tags">
+								<span>Simulator</span>
+								<span>Puzzle</span>
+							</span>
+							<div class="platform">
+								Made with <a href="https://unity.com/" target="_blank">Unity</a>
+							</div>
+							<div class="short-desc">
+								3D and rotation axis in Unity
+							</div>
+							<a href="https://gitlab.com/DucQuang1820/rubikstimulator" class="icon fa-solid fa-arrow-alt-circle-right" target="_blank"></a>
+							<a href="/#rubik-box">Try now</a>
+						</div>
+					</div>
+					<div class="project-item">
+						<img class="project-image" src="./images/project7.png" />
+						<div class="project-detail">
+							Solitaire
+							<span class="detail-tags">
+								<span>Card</span>
+							</span>
+							<div class="platform">
+								Made with <a href="https://unity.com/" target="_blank">Unity</a>
+							</div>
+							<div class="short-desc">
+								Card game with custom assets
+							</div>
+							<a href="https://gitlab.com/DucQuang1820/solitairestimulator_unity/-/tree/main" class="icon fa-solid fa-arrow-alt-circle-right" target="_blank"></a>
+							<a href="/#solitaire-box">Try now</a>
 						</div>
 					</div>
 					<div class="project-item">
 						<img class="project-image" src="./images/project2.png" />
 						<div class="project-detail">
 							Tetris 3D
-							<div class="detail-tags">
-								<div>Puzzle</div>
-								<div>Arcade</div>
-								<div>Single player</div>
+							<span class="detail-tags">
+								<span>Puzzle</span>
+								<span>Arcade</span>
+							</span>
+							<div class="platform">
+								Made with <a href="https://www.unrealengine.com/" target="_blank">Unreal Engine 5</a>
 							</div>
-							<a href="https://gitlab.com/DucQuang1820/tetris_ur/-/tree/master" target="_blank">Check the
-								repo</a>
-						</div>
-					</div>
-					<div class="project-item">
-						<img class="project-image" src="./images/project5.png" />
-						<div class="project-detail">
-							Lines 98
-							<div class="detail-tags">
-								<div>Classic</div>
-								<div>Arcade</div>
-								<div>Puzzle</div>
+							<div class="short-desc">
+								All time favorite puzzle to learn Unreal 3D scene
 							</div>
-							<a href="https://github.com/DucQuang1820/Lines97_Unity" target="_blank">Check the repo</a>
+							<a href="https://gitlab.com/DucQuang1820/tetris_ur/-/tree/master" class="icon fa-solid fa-arrow-alt-circle-right" target="_blank"></a>
 						</div>
 					</div>
 					<div class="project-item">
 						<img class="project-image" src="./images/project3.png" />
 						<div class="project-detail">
 							Zombie shooter
-							<div class="detail-tags">
-								<div>FPS</div>
-								<div>Single player</div>
+							<span class="detail-tags">
+								<span>FPS</span>
+								<span>Single player</span>
+							</span>
+							<div class="platform">
+								Made with <a href="https://www.unrealengine.com/" target="_blank">Unreal Engine 5</a>
 							</div>
-							<a href="https://gitlab.com/DucQuang1820/zombieshooterfps_ue5/-/tree/master"
-								target="_blank">Check the repo</a>
+							<div class="short-desc">
+								Simple FPS with basic NPC and movement
+							</div>
+							<a href="https://gitlab.com/DucQuang1820/zombieshooterfps_ue5/-/tree/master" class="icon fa-solid fa-arrow-alt-circle-right"
+								target="_blank"></a>
 						</div>
 					</div>
+				</div>
+				<div class="project-list">
+					<div class="subTit">
+						<div>Employer Projects</div>
+						<div class="divLine"></div>
+					</div>
+
 					<div class="project-item">
 						<img class="project-image" src="./images/project4.png" />
 						<div class="project-detail">
 							Hero war
-							<div class="detail-tags">
-								<div>FPS</div>
-								<div>Multiplayer</div>
-								<div>PvP</div>
+							<span class="detail-tags">
+								<span>FPS</span>
+								<span>Multiplayer</span>
+							</span>
+							<div class="platform">
+								Made with <a href="https://www.unrealengine.com/" target="_blank">Unreal Engine 5</a>
 							</div>
-							<a href="#" target="_blank">Employer project</a>
+							<div class="short-desc">
+								PvP shooter where I learned netcode and model rigging
+							</div>
+							<a>Employer project (WIP)</a>
 						</div>
 					</div>
 				</div>
