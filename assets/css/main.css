@@ -1147,7 +1147,7 @@ input, select, textarea {
  center;
 			background-repeat: no-repeat,
  repeat;
-			z-index: 3;
+			z-index: 4;
 		}
 
 		#bg:after {
@@ -1161,11 +1161,18 @@ input, select, textarea {
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 			background-image: url("../../images/bg.jpg");
 			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
+			background-size: 200% auto;
 			z-index: 1;
+			animation: animateMainBg 40s linear infinite forwards;
 		}
-
+		@keyframes animateMainBg {
+			from {
+				background-position: 0 40%;
+			}
+			to {
+				background-position: 200% 40%;
+			}
+		}
 		body.is-article-visible #bg:after {
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
@@ -1761,7 +1768,7 @@ input, select, textarea {
 .herosnake-bg {
 	position: fixed;
 	inset: 0;
-	z-index: 2;
+	z-index: 3;
 }
 .herowar-bg video,
 .herosnake-bg video {
@@ -1800,6 +1807,43 @@ input, select, textarea {
 .callScroll svg {
 	width: 50px;
 	aspect-ratio: 1;
+}
+.parallax {
+	position: fixed;
+	inset: 0;
+	z-index: 2;
+	background-image: url(../../images/tree2.png);
+	background-position: bottom;
+	background-repeat: repeat;
+	background-size: 200%;
+	animation: animateBgTree 30s linear infinite forwards;
+}
+.parallax::before,
+.parallax::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+}
+.parallax::before {
+	background-image: url(../../images/tree1.png);
+	background-position: bottom;
+	background-repeat: repeat;
+	background-size: 200%;
+	animation: animateBgTree 20s linear infinite forwards;
+}
+@keyframes animateBgTree {
+	from {
+		background-position: 0 bottom;
+	}
+	to {
+		background-position: 200% bottom;
+	}
+}
+.parallax::after {
+	background-image: url(../../images/grass.png);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	animation: animateBgTree 20s linear infinite forwards reverse;
 }
 @media (min-width: 737px) {
 	.project-item {
