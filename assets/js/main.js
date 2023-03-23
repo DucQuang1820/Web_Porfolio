@@ -295,7 +295,11 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+							if($this.hasClass('herowar') || $this.hasClass('herosnake')) {
+								location.hash = '#work';
+							} else {
+								location.hash = '';
+							}
 						});
 
 				// Prevent clicks from inside article from bubbling.
@@ -361,7 +365,13 @@
 					}
 
 			});
-
+			$('#herowar-image').on('click', function() {
+				location.hash = '#herowar'
+			})
+			$('#herosnake-image').on('click', function() {
+				location.hash = '#herosnake'
+			})
+			
 		// Scroll restoration.
 		// This prevents the page from scrolling back to the top on a hashchange.
 			if ('scrollRestoration' in history)

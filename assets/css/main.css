@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+* {caret-color: transparent;}
 
 ol, ul {
 	list-style: none;
@@ -1146,7 +1147,7 @@ input, select, textarea {
  center;
 			background-repeat: no-repeat,
  repeat;
-			z-index: 2;
+			z-index: 3;
 		}
 
 		#bg:after {
@@ -1722,6 +1723,7 @@ input, select, textarea {
 	font-size: 14px
 }
 .project-detail .short-desc {
+	font-style: italic;
 	font-size: 16px;
 	color: rgb(230, 230, 230);
 }
@@ -1735,6 +1737,69 @@ input, select, textarea {
 	font-size: 20px;
 	padding-left: 6px;
 	padding-right: 10px;
+}
+.work-image {
+	width: 100%;
+	object-fit: contain;
+	margin-bottom: 15px;
+}
+#herowar-image {
+	cursor: pointer;
+	transition: 0.4s;
+}
+#herowar-image:hover {
+	transform: scale(1.05);
+}
+#herosnake-image {
+	cursor: pointer;
+	transition: 0.4s;
+}
+#herosnake-image:hover {
+	transform: scale(1.05);
+}
+.herowar-bg,
+.herosnake-bg {
+	position: fixed;
+	inset: 0;
+	z-index: 2;
+}
+.herowar-bg video,
+.herosnake-bg video {
+	width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: 0.4s;
+}
+#wrapper:has(article#herowar.active) + #bg .herowar-bg video {
+	opacity: 1;
+}
+#wrapper:has(article#herosnake.active) + #bg .herosnake-bg video {
+	opacity: 1;
+}
+#herowar.active,
+#herosnake.active {
+	margin-top: 85vh;
+}
+#herowar.active .callScroll,
+#herosnake.active .callScroll {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: callToScroll 1s infinite alternate;
+}
+@keyframes callToScroll {
+	from {
+		transform: translateX(-50%) translateY(0);
+	}
+	to {
+		transform: translateX(-50%) translateY(-30px);
+	}
+}
+.callScroll svg {
+	width: 50px;
+	aspect-ratio: 1;
 }
 @media (min-width: 737px) {
 	.project-item {
