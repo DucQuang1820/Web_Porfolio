@@ -1185,6 +1185,8 @@ input, select, textarea {
 		}
 
 		body.is-preload #bg:before {
+			content: 'Loading';
+			color: white;
 			background-color: #000000;
 		}
 
@@ -1843,7 +1845,8 @@ input, select, textarea {
 	background-image: url(../../images/grass.png);
 	background-position: bottom;
 	background-repeat: repeat-x;
-	animation: animateBgTree 20s linear infinite forwards reverse;
+	background-size: 200% 300px;
+	animation: animateBgTree 20s linear infinite forwards;
 }
 @media (min-width: 737px) {
 	.project-item {
