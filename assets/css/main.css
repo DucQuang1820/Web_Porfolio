@@ -1182,15 +1182,17 @@ input, select, textarea {
 		}
 
 		body.is-preload #bg:before {
-			content: '';
-			color: white;
+			content: 'Gifs and background from Helltaker';
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			padding-bottom: 100px;
 			background-color: #000000;
-			background-image: url(../../images/loading.gif), url(../../images/Justice.gif), url(../../images/Cerberus.gif), url(../../images/loadingBG.png);
-			background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-			background-position: 50%, calc(50% - 150px), calc(50% + 150px), center 40%;
-			background-size: 100px, 100px, 100px, cover;
+			background-image: url(../../images/loading.gif), url(../../images/Justice.gif), url(../../images/Cerberus.gif),url(../../images/loadText2.gif), url(../../images/loadingBG.png);
+			background-repeat: no-repeat, no-repeat, no-repeat, no-repeat ,no-repeat;
+			background-position: 50%, calc(50% - 150px), calc(50% + 150px), center 70% ,center 40%;
+			background-size: 100px, 100px, 100px, 400px ,cover;
 		}
-
 /* Wrapper */
 
 	#wrapper {
