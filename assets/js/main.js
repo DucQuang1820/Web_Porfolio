@@ -13,6 +13,11 @@
 		$footer = $('#footer'),
 		$main = $('#main'),
 		$main_articles = $main.children('article');
+		$rubik_article = $('#rubik-box');
+		$lines97_article = $('#lines97-box');
+		$solitaire_article = $('#solitaire-box');
+		$iframes_article = $main.children('.iframe-box');
+		iframeCount = 0;
 
 	// Breakpoints.
 		breakpoints({
@@ -29,6 +34,7 @@
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 4000);
+			
 		});
 
 	// Fix: Flexbox min-height bug on IE.
@@ -365,12 +371,12 @@
 					}
 
 			});
-			$('#herowar-image').on('click', function() {
-				location.hash = '#herowar'
-			})
-			$('#herosnake-image').on('click', function() {
-				location.hash = '#herosnake'
-			})
+			// $('#herowar-image').on('click', function() {
+			// 	location.hash = '#herowar'
+			// })
+			// $('#herosnake-image').on('click', function() {
+			// 	location.hash = '#herosnake'
+			// })
 			
 		// Scroll restoration.
 		// This prevents the page from scrolling back to the top on a hashchange.

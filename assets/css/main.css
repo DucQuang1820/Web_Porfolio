@@ -1141,12 +1141,9 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto,
- 256px 256px;
-			background-position: center,
- center;
-			background-repeat: no-repeat,
- repeat;
+			background-size: auto, 256px 256px;
+			background-position: center, center;
+			background-repeat: no-repeat, repeat;
 			z-index: 4;
 		}
 
@@ -1161,7 +1158,7 @@ input, select, textarea {
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 			background-image: url("../../images/bg.jpg");
 			background-position: center;
-			background-size: 200% auto;
+			background-size: auto 110vh;
 			z-index: 1;
 			animation: animateMainBg 40s linear infinite forwards;
 		}
@@ -1170,7 +1167,7 @@ input, select, textarea {
 				background-position: 0 40%;
 			}
 			to {
-				background-position: 200% 40%;
+				background-position: calc(((110vh) * (-5333 / 3000) )) 40%;
 			}
 		}
 		body.is-article-visible #bg:after {
@@ -1185,9 +1182,13 @@ input, select, textarea {
 		}
 
 		body.is-preload #bg:before {
-			content: 'Loading';
+			content: '';
 			color: white;
 			background-color: #000000;
+			background-image: url(../../images/loading.gif), url(../../images/Justice.gif), url(../../images/Cerberus.gif), url(../../images/loadingBG.png);
+			background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+			background-position: 50%, calc(50% - 150px), calc(50% + 150px), center 40%;
+			background-size: 100px, 100px, 100px, cover;
 		}
 
 /* Wrapper */
@@ -1696,12 +1697,21 @@ input, select, textarea {
 	padding: 20px 0px;
 	box-shadow: 0px 3px 4px -3px rgba(255, 255, 255, 0.5);
 }
-
+.project-item > a {
+	width: 100%;
+	max-width: 250px;
+	border: none;
+}
 .project-item .project-image {
 	width: 100%;
 	max-width: 250px;
 	aspect-ratio: 16/9;
 	object-fit: cover;
+	opacity: 0.7;
+	transition: opacity 0.4s;
+}
+.project-item .project-image:hover {
+	opacity: 1;
 }
 .project-detail {
 	padding-left: 15px;
@@ -1752,20 +1762,7 @@ input, select, textarea {
 	object-fit: contain;
 	margin-bottom: 15px;
 }
-#herowar-image {
-	cursor: pointer;
-	transition: 0.4s;
-}
-#herowar-image:hover {
-	transform: scale(1.05);
-}
-#herosnake-image {
-	cursor: pointer;
-	transition: 0.4s;
-}
-#herosnake-image:hover {
-	transform: scale(1.05);
-}
+
 .herowar-bg,
 .herosnake-bg {
 	position: fixed;
@@ -1810,14 +1807,30 @@ input, select, textarea {
 	width: 50px;
 	aspect-ratio: 1;
 }
+#wrapper:has(article#herowar.active) + #bg .parallax {
+	/* animation-play-state: paused */
+	display: none;
+}
+#wrapper:has(article#herosnake.active) + #bg .parallax {
+	/* animation-play-state: paused */
+	display: none;
+}
+/* #wrapper:has(article#herowar.active) + #bg .parallax::after,
+#wrapper:has(article#herowar.active) + #bg .parallax::before {
+	animation-play-state: paused
+}
+#wrapper:has(article#herosnake.active) + #bg .parallax::after,
+#wrapper:has(article#herosnake.active) + #bg .parallax::before {
+	animation-play-state: paused
+} */
 .parallax {
 	position: fixed;
 	inset: 0;
 	z-index: 2;
 	background-image: url(../../images/tree2.png);
 	background-position: bottom;
-	background-repeat: repeat;
-	background-size: 200%;
+	background-repeat: repeat-x;
+	background-size: auto 110vh;
 	animation: animateBgTree 30s linear infinite forwards;
 }
 .parallax::before,
@@ -1829,8 +1842,8 @@ input, select, textarea {
 .parallax::before {
 	background-image: url(../../images/tree1.png);
 	background-position: bottom;
-	background-repeat: repeat;
-	background-size: 200%;
+	background-repeat: repeat-x;
+	background-size: auto 110vh;
 	animation: animateBgTree 20s linear infinite forwards;
 }
 @keyframes animateBgTree {
@@ -1838,14 +1851,14 @@ input, select, textarea {
 		background-position: 0 bottom;
 	}
 	to {
-		background-position: 200% bottom;
+		background-position: calc(((110vh) * (-928 / 270) )) bottom;
 	}
 }
 .parallax::after {
 	background-image: url(../../images/grass.png);
 	background-position: bottom;
 	background-repeat: repeat-x;
-	background-size: 200% 300px;
+	background-size: auto 300px;
 	animation: animateBgTree 20s linear infinite forwards;
 }
 @media (min-width: 737px) {
